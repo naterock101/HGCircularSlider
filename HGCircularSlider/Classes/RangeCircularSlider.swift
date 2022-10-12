@@ -62,7 +62,7 @@ open class RangeCircularSlider: CircularSlider {
      *
      * The default value of this property is nil
      */
-    open var startThumbImage: UIImage?
+    @objc open var startThumbImage: UIImage?
     
     
     // MARK: Accessing the Slider’s Value Limits
@@ -124,7 +124,7 @@ open class RangeCircularSlider: CircularSlider {
      *
      * The default value of this property is 0.0.
      */
-    open var startPointValue: CGFloat = 0.0 {
+    @objc open var startPointValue: CGFloat = 0.0 {
         didSet {
             guard oldValue != startPointValue else { return }
             
@@ -148,7 +148,7 @@ open class RangeCircularSlider: CircularSlider {
      *
      * The default value of this property is 0.5
      */
-    override open var endPointValue: CGFloat {
+    @objc override open var endPointValue: CGFloat {
         didSet {
             if oldValue == endPointValue && distance <= 0 {
                 return
